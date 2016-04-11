@@ -24,15 +24,10 @@
 
       assert.strictEqual(liger.age(), 28 , 'age exists');
 
-
-      // assert.ok(bob, 'bob exists');
-      // assert.ok( bob instanceof window.work.Person, 'person objects are from Person');
-      // assert.strictEqual( bob.salary, 30000, 'the salary should be assigned to object' );
-      //
-      // bob.raise(10);
-      //
-      // assert.strictEqual(bob.salary, (30000 * 1.1), 'ensure correct salary after raise');
     });
+
   });
+
+
 
 })();
