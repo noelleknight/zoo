@@ -25,7 +25,7 @@
     test('Whaleshark has origin method and correct return value', function(){
 
       var bruce = new window.zoo.WhaleShark('Bruce', 1997);
-      
+
       assert.typeOf( bruce.origin(), 'string', 'origin returns primitive');
       // assert.strictEqual( bruce.origin(), 'Caribbean' || 'Pacific' || 'Atlantic', 'origin returns correct value');
 
