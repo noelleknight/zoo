@@ -5,25 +5,20 @@
 
     ns.Animal.call(this, name, birthday);
 
-    this.babyCheetah = [];
   };
 
   ns.Cheetah.prototype = Object.create(ns.Animal.prototype);
   ns.Cheetah.prototype.constructor = ns.Cheetah;
 
-  // ns.Cheetah.prototype.haveBabies = function haveBabies(babyname) {
-  //   var kate = new ns.Cheetah( babyname);
-  //   return (this.babyCheetah.push( kate ));
-  // };
+  ns.Cheetah.prototype.birth = function birth(babyname) {
+    return this.name + ' had a baby named, ' + babyname;
+  };
 
-  // ns.Cheetah.prototype.spots = function spots(numberOfSpots){
-  //
-  //   this.spots = numberOfSpots;
-  // };
+  ns.Cheetah.prototype.spots = function spots(spotsnum) {
 
-  // ns.Cheetah.prototype.toString = function toString(){
-  //   return this.name + ', ' + this.birthday + ', ' + this.babyCheetah + ', ' + this.spots;
-  // };
+    return (spotsnum * 10);
+    
+  };
 
   window.zoo = ns;
 
