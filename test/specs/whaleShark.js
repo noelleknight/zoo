@@ -19,15 +19,14 @@
       assert.strictEqual(bruce.toString(), 'Bruce,1997', 'toString returns correct ');
       assert.isAbove(bruce.eggs(), 0, 'returned number of eggs');
       assert.isBelow(bruce.eggs(), 301, 'returned number of eggs within math random parameters');
-
     });
 
     test('Whaleshark has origin method and correct return value', function(){
 
       var bruce = new window.zoo.WhaleShark('Bruce', 1997);
 
-      assert.typeOf( bruce.origin(), 'string', 'origin returns primitive');
-      // assert.strictEqual( bruce.origin(), 'Caribbean' || 'Pacific' || 'Atlantic', 'origin returns correct value');
+      assert.typeOf( bruce.origin(), 'string', 'origin returns primitive that it should');
+      // assert.oneOf( bruce.origin(),'Caribbean', ['Caribbean', 'Pacific', 'Atlantic'], 'origin returns correct value');
       // is oneOf OR assert ok index of > 1
 
     });

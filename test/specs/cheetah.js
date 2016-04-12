@@ -17,7 +17,7 @@
     test('age method works as expected', function(){
 
       var rolf = new window.zoo.Cheetah('Rolf', 2011);
-      
+
       assert.strictEqual(rolf.age(), 5 , 'age exists');
     });
 
@@ -27,6 +27,26 @@
 
       assert.strictEqual(merl.birth('Kyle'), 'Merl had a baby named, Kyle');
       assert.strictEqual(merl.spots(3), 30, 'spots method returns correct value');
+    });
+    test('spots method throws error when input is not a number', function(){
+
+      var doris = new window.zoo.Cheetah('Doris', 1999);
+
+      try{
+        assert.strictEqual(doris.spots("hello"),"hello", 'this should not work');
+      } catch(err) {
+        assert.strictEqual(err.message, 'Please enter a number!');
+      }
+    });
+    test('birth method throws error when babyname is not a string', function(){
+
+      var doris = new window.zoo.Cheetah('Doris', 1999);
+
+      try{
+        assert.strictEqual(doris.birth(false),"false", 'this should not work');
+      } catch(err) {
+        assert.strictEqual(err.message, 'This should be a stringy type of thing!');
+      }
     });
   });
 

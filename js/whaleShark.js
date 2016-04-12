@@ -21,7 +21,9 @@
 
   ns.WhaleShark.prototype.origin = function origin() {
     return (placesOfOrigin[Math.floor(Math.random() * placesOfOrigin.length)]);
-  };
+    };
+
+
 
 
   window.zoo = ns;
