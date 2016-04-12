@@ -28,7 +28,7 @@
 
       assert.typeOf( bruce.origin(), 'string', 'origin returns primitive');
       // assert.strictEqual( bruce.origin(), 'Caribbean' || 'Pacific' || 'Atlantic', 'origin returns correct value');
-
+      // is oneOf OR assert ok index of > 1
 
     });
 
