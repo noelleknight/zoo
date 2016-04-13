@@ -39,15 +39,15 @@
     });
     test('animal constructor throws error when args type is incorrect', function(){
 
-      var python = new window.zoo.Animal(12, 2010);
-
       try{
-        assert.strictEqual(python.name(12), 12, 'this will produce an error');
+        var python = new window.zoo.Animal(12, 2010);
+
+        assert.strictEqual(python.name, 12, 'this will produce an error');
       }
       catch(err) {
         assert.strictEqual(err.message, 'You are putting in the wrong type of value');
       }
-  });
+    });
   });
 
 })();
