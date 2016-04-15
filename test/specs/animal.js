@@ -31,7 +31,8 @@
       python.expire();
 
       try{
-        assert.strictEqual(python.age(), 6, 'this will produce an error');
+        python.age();
+        assert.ok(false, 'This is failsafe fail test');
       }
       catch(err) {
         assert.strictEqual(err.message, 'This animal is expired, therefore ageless.', 'python is dead');
@@ -42,7 +43,7 @@
       try{
         var python = new window.zoo.Animal(12, 2010);
 
-        assert.strictEqual(python.name, 12, 'this will produce an error');
+        assert.ok(false, 'this will produce an error');
       }
       catch(err) {
         assert.strictEqual(err.message, 'You are putting in the wrong type of value');
